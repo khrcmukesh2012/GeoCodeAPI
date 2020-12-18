@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Address List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <a href="upload-address" class="btn btn-secondary m-5">Upload Address</a>
+    <a href="download" class="btn btn-secondary ">Download Address</a>
+    <br>
+    <table class="table table-striped m-5">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Address</th>
+          <th scope="col">State</th>
+          <th scope="col">Country</th>
+          <th scope="col">Pin Code</th>
+          <th scope="col">Lat</th>
+          <th scope="col">Lng</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for record in data %}
+            <tr>
+              <th scope="row">{{record.address}}</th>
+              <td>{{record.state}}</td>
+              <td>{{record.country}}</td>
+              <td>{{record.pin_code}}</td>
+              <td>{{record.lat}}</td>
+              <td>{{record.log}}</td>
+            </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</body>
+</html>
