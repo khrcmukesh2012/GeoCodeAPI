@@ -7,7 +7,7 @@ import requests
 import pandas as pd
 import os
 # Create your views here.
-GOOGLE_API_KEY = 'AIzaSyAYxageh_94JjLJjaEgYTbTrnXKSJS5v20'
+GOOGLE_API_KEY = 'API key '
 
 
 def extract_lat_long_via_address(address_or_zipcode):
